@@ -191,7 +191,7 @@ export default class extends mixins(lerpMixinVue) {
     this.translateDx = this.lerp(this.translateDx, this.translateX, 0.15)
     this.translateDx = Math.floor(this.translateDx * 100) / 100
 
-    window.requestAnimationFrame(this.raf)
+    this.requestAnimationFrame = window.requestAnimationFrame(this.raf)
   }
 
   @Watch('translateX')
